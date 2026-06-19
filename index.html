@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+  <title>爱游戏 – 简明指南与访问提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f5f0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'Helvetica Neue', sans-serif;
+      color: #2e2b26;
+      line-height: 1.7;
+      padding: 2rem 1.2rem;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    /* 主容器增加温和的呼吸感 */
+    .page {
+      background: #fffcf9;
+      border-radius: 28px;
+      padding: 2.2rem 1.8rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    /* hero 分区 — 更接近生活化短文案 */
+    .hero {
+      margin-bottom: 2.6rem;
+      border-bottom: 1px solid #ece7e0;
+      padding-bottom: 1.8rem;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #3c352e;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .hero .subhead {
+      font-size: 1.1rem;
+      color: #6b6259;
+      background: #efebe6;
+      display: inline-block;
+      padding: 0.2rem 1.2rem 0.3rem 1.2rem;
+      border-radius: 40px;
+      margin-top: 0.3rem;
+    }
+    .hero p {
+      margin-top: 1.2rem;
+      font-size: 1.05rem;
+      color: #4b453e;
+      max-width: 70ch;
+    }
+
+    /* 引用块 / 提示框风格 — 仿文章旁注 */
+    .notice-box {
+      background: #f4efe8;
+      border-left: 5px solid #b8aa98;
+      padding: 1rem 1.3rem;
+      margin: 2rem 0 1.6rem 0;
+      border-radius: 0 16px 16px 0;
+      font-size: 0.95rem;
+    }
+    .notice-box strong {
+      font-weight: 600;
+      color: #3c352e;
+    }
+
+    /* 优势 / 特点列表 — 用简洁卡片式 */
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0;
+    }
+    .advantage-item {
+      background: #fdfaf7;
+      border: 1px solid #e8e1d8;
+      border-radius: 20px;
+      padding: 1.2rem 1.1rem 1.1rem 1.1rem;
+      transition: background 0.1s;
+    }
+    .advantage-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      color: #3f3830;
+    }
+    .advantage-item p {
+      font-size: 0.9rem;
+      color: #5f554b;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 450;
+      margin: 2rem 0 1rem 0;
+      letter-spacing: -0.01em;
+      border-bottom: 2px dotted #dad2c8;
+      padding-bottom: 0.3rem;
+      color: #3c352e;
+    }
+
+    /* 说明区：简明指南的段落 */
+    .guide-step {
+      margin: 1.2rem 0;
+      padding-left: 0.4rem;
+    }
+    .guide-step p + p {
+      margin-top: 0.8rem;
+    }
+    .guide-step .meta-note {
+      background: #f9f3ec;
+      padding: 0.5rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      display: inline-block;
+      color: #4b3f35;
+    }
+
+    /* FAQ 摘要 — 紧凑折叠感 */
+    .faq-summary {
+      margin: 2.2rem 0 1.8rem 0;
+    }
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #e7dfd6;
+    }
+    .faq-item q {
+      font-weight: 480;
+      color: #3f3830;
+      quotes: "“" "”" "‘" "’";
+    }
+    .faq-item p {
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: #5b5248;
+    }
+
+    /* 底部链接嵌入句子 */
+    .footer-note {
+      margin-top: 2.8rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #e2d9cf;
+      font-size: 0.95rem;
+      color: #4a423a;
+    }
+    .footer-note a {
+      color: #5f4d3a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #cbb8a4;
+      transition: border-color 0.1s;
+    }
+    .footer-note a:hover {
+      border-bottom-color: #7f6a54;
+    }
+
+    /* 小字号 & 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page {
+        padding: 1.5rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .advantage-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+      .hero .subhead {
+        font-size: 0.95rem;
+      }
+    }
+    /* 保持行宽舒适 */
+    .text-balance {
+      max-width: 70ch;
+    }
+
+    /* 纯粹装饰 */
+    .separator-dot {
+      display: inline-block;
+      margin: 0 0.3rem;
+      color: #c0b4a6;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 区 -->
+  <div class="hero">
+    <h1>爱游戏<br>简明指南与访问提醒</h1>
+    <span class="subhead">日常陪伴 · 轻松开始</span>
+    <p>无论你是第一次接触，还是想找些新乐趣，从这里起步都很简单。下面整理了几个要点，帮你更快上手。</p>
+  </div>
+
+  <!-- 提示框：访问提醒 -->
+  <div class="notice-box">
+    <strong>💡 访问提醒</strong> · 建议使用最新版浏览器，保持网络稳定。页面中所有功能均基于常规网页技术，无需额外安装插件。若遇到载入缓慢，可尝试刷新或稍后再试。
+  </div>
+
+  <!-- 优势区 2x2 -->
+  <div class="advantage-grid">
+    <div class="advantage-item">
+      <h3>轻量体验</h3>
+      <p>页面加载迅捷，不堆积多余内容，把注意力还给真正重要的部分。</p>
+    </div>
+    <div class="advantage-item">
+      <h3>信息友好</h3>
+      <p>分类和引导清晰，从找到兴趣点到深入了解，每一步都自然。</p>
+    </div>
+    <div class="advantage-item">
+      <h3>随时可用</h3>
+      <p>电脑、平板、手机 — 响应式布局让体验保持一致，没有割裂感。</p>
+    </div>
+    <div class="advantage-item">
+      <h3>持续更新</h3>
+      <p>内容与提示会定期调整，跟着实际使用反馈慢慢优化，不搞突然变化。</p>
+    </div>
+  </div>
+
+  <!-- 说明区：从简明指南切入 -->
+  <h2 class="section-title">🔹 怎么开始？几条实在建议</h2>
+  <div class="guide-step">
+    <p><span class="meta-note">❶ 直接浏览</span> – 打开页面后，你可以根据分区标题快速了解概况。不需要注册或填写任何信息，所见即所得。</p>
+    <p><span class="meta-note">❷ 留意提示</span> – 部分功能旁边会有简短的说明块，比如当前区块的作用或常见操作。花十秒扫一眼，往往能省下后续摸索的时间。</p>
+    <p><span class="meta-note">❸ 保持耐心</span> – 如果某个页面元素没有立刻出现，很可能是网络或缓存原因。刷新一次通常就能解决。另外，白天访问高峰时段偶尔会有排队，错峰体验更流畅。</p>
+    <p style="margin-top: 1rem; font-style: italic; color: #6a5e53;">—— 这些建议来自日常使用中的小总结，不复杂，但管用。</p>
+  </div>
+
+  <!-- FAQ 摘要：三个最常见的问题 -->
+  <h2 class="section-title">❓ 常见疑问速览</h2>
+  <div class="faq-summary">
+    <div class="faq-item">
+      <q>需要下载或安装吗？</q>
+      <p>不需要。整个体验都基于浏览器，打开网站就能用，不占用你本地额外空间。</p>
+    </div>
+    <div class="faq-item">
+      <q>手机上的效果和电脑一样吗？</q>
+      <p>布局会自适应屏幕宽度，核心内容和操作逻辑保持一致。个别图标或按钮位置会有调整，但不会丢失功能。</p>
+    </div>
+    <div class="faq-item">
+      <q>遇到显示异常怎么办？</q>
+      <p>先尝试刷新页面；如果仍然异常，可以检查浏览器版本或清理缓存。大部分情况下刷新就能恢复。</p>
+    </div>
+    <div style="margin-top: 0.8rem; font-size: 0.9rem; color: #6b6259;">更多细节欢迎在实际使用中慢慢发现。</div>
+  </div>
+
+  <!-- 底部链接：自然嵌入句子 -->
+  <div class="footer-note">
+    <p>如果你觉得这些指引有用，不妨直接去 <a href="https://webmain-aiyouxi.com.cn">爱游戏</a> 看一看，内容本身比任何介绍都更直观。希望你在那里获得一段放松的时光。</p>
+    <p style="margin-top: 1rem; font-size: 0.85rem; color: #7a7269;">本页面仅作为使用参考，所有功能以实际网站为准。</p>
+  </div>
+
+</div>
+</body>
+</html>
