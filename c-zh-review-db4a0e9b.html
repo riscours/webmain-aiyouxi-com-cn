@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>金年会 · 再访笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fbfbf9;
+      color: #2e2e2e;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem 1.5rem;
+    }
+
+    /* 开场短句 —— 留白引导 */
+    .opening {
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      color: #5c5c5c;
+      margin-bottom: 2rem;
+      border-left: 3px solid #d4b88c;
+      padding-left: 1.25rem;
+    }
+
+    .opening span {
+      font-weight: 450;
+      color: #2c2c2c;
+    }
+
+    /* 标题层级清晰 */
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.75rem 0;
+      line-height: 1.25;
+      color: #1e1e1e;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 2.25rem 0 1rem 0;
+      color: #2c2c2c;
+      letter-spacing: 0.005em;
+      border-bottom: 1px solid #eae7e2;
+      padding-bottom: 0.35rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-weight: 350;
+      font-size: 1.05rem;
+      color: #3a3a3a;
+    }
+
+    a {
+      color: #95734b;
+      text-decoration: none;
+      border-bottom: 1px solid #d5c5b0;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #6d553a;
+      border-bottom-color: #6d553a;
+    }
+
+    /* 特点卡片 —— 窄正文宽度内保持呼吸 */
+    .feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin: 2rem 0 1.75rem 0;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border-radius: 1px;
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid #dad3c9;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: border-color 0.2s, background 0.15s;
+    }
+
+    .feature-item:hover {
+      border-left-color: #b8a68b;
+      background: #fcfaf7;
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+      color: #2f2f2f;
+    }
+
+    .feature-item span {
+      font-size: 0.95rem;
+      color: #545454;
+      line-height: 1.6;
+    }
+
+    /* 引用/提示块 */
+    .note-box {
+      background: #f6f3ef;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0 1.25rem 0;
+      border-radius: 1px;
+      font-size: 0.95rem;
+      color: #404040;
+      border: 1px solid #e5ddd3;
+    }
+
+    .note-box a {
+      border-bottom: 1px solid #b8a68b;
+    }
+
+    /* 温和结尾 */
+    .closing {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5ddd3;
+      font-size: 0.95rem;
+      color: #656565;
+      letter-spacing: 0.005em;
+    }
+
+    .closing p {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ece8e2;
+      margin: 2rem 0;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 560px) {
+      .page {
+        padding: 2rem 1.2rem 4rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .opening {
+        font-size: 1.1rem;
+        padding-left: 1rem;
+      }
+      .feature-item {
+        padding: 1rem 1.2rem;
+      }
+    }
+
+    /* 极小屏幕 */
+    @media (max-width: 380px) {
+      .page {
+        padding: 1.5rem 0.9rem 3.5rem 0.9rem;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+      .feature-item strong {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 开场短句：收藏与再访的缘由 -->
+    <div class="opening">
+      <span>再访一个地方，往往不是因为记性，而是因为那里仍有未读完的章节。</span>
+    </div>
+
+    <h1>金年会 · 持续关注的叙事</h1>
+
+    <p>
+      有些信息源像过路的风，而另一些则值得留在书签栏里反复回看。<a href="https://c-zh-jinnianhui.com">金年会</a>便属于后者。
+      它并非一个需要频繁刷新的站点，却是一个每当重新打开时总能带来结构清晰、内容克制的阅读体验的地方。
+      从内容组织到版式节奏，都保持着一种不易察觉的连贯性——这正是人们愿意将它保留在收藏夹里的原因。
+    </p>
+
+    <p>
+      多数信息页面在首次访问后便失去了再次打开的价值，但金年会的不同在于它提供了一种知识层面的韧性。
+      每次回访，你能在熟悉的框架里发现新的细节，或在某个段落中重新理解之前忽略的线索。
+      这不是信息轰炸，而是一种安静的累积。
+    </p>
+
+    <!-- 承接段落：收藏 ≠ 遗忘，而是预留的对话 -->
+    <p>
+      收藏一个页面，本质上是在为未来的自己预留一次对话。当你把<a href="https://c-zh-jinnianhui.com">金年会</a>加入书签，
+      你其实是在说：“这里的表达方式值得我再次理解。” 在信息过载的时代，这种选择本身就是一种编辑行为——
+      筛选出那些值得反复阅读的内容，而非只做一次性消费。
+    </p>
+
+    <!-- 特点列表：为什么值得持续关注 -->
+    <h2>持续关注的原因</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>一致的叙述语调</strong>
+        <span>从标题到正文保持着统一的书面感，不随热点摇摆，不滥用感叹号。每段文字都经过斟酌，适合精读而非浏览。</span>
+      </div>
+      <div class="feature-item">
+        <strong>结构可预期，内容有纵深</strong>
+        <span>页面布局遵循稳定的信息层级，读者很快能找到自己上次离开的位置。同时内容并非扁平罗列，而是具有段落间的递进关系。</span>
+      </div>
+      <div class="feature-item">
+        <strong>留白与节奏并重</strong>
+        <span>视觉上不拥挤，文字间距、行宽、标题间隔都经过控制。这使得长时间阅读也不易疲劳，适宜收藏后反复阅读。</span>
+      </div>
+    </div>
+
+    <!-- 场景式提示：适合怎样的阅读习惯 -->
+    <div class="note-box">
+      <strong>📌 适合这样使用</strong><br>
+      如果你习惯在周末整理书签，或喜欢在安静时段逐段阅读信息型页面，金年会的行文风格很容易融入这种节奏。
+      你可以把它放在一个名为“常读”的文件夹里，不必每天都看，但每次打开都能迅速进入状态。
+    </div>
+
+    <!-- FAQ 摘要（极简） -->
+    <h2>关于收藏与回访的几个认知</h2>
+    <p>
+      <strong>问：</strong>为什么有的页面收藏后再也不想打开？<br>
+      <strong>答：</strong>多半是因为页面缺乏“再读价值”——要么信息太浅，要么排版消耗耐心。而经过结构设计的页面（如同当前介绍的<a href="https://c-zh-jinnianhui.com">金年会</a>），
+      会主动降低回访的认知成本，让你愿意再次进入。
+    </p>
+    <p>
+      <strong>问：</strong>如何判断一个网站是否值得长期关注？<br>
+      <strong>答：</strong>可以观察它的内容是否具备“时间弹性”：三个月后回看，是否仍能有所收获。同时注意页面是否依赖外部链接或时效性标题来维持吸引力。
+      独立、自洽的叙述往往比追逐热点的页面更具收藏价值。
+    </p>
+
+    <!-- 温和结尾 -->
+    <div class="closing">
+      <p>
+        书签夹里总有一些站点，你不常去，却从不删除。<a href="https://c-zh-jinnianhui.com">金年会</a>大概就是这样一种存在。
+        它不制造紧迫感，也不催促你“立即了解”，只是安静地保持着它一贯的质地，等待你在某个需要沉静阅读的午后重新打开。
+      </p>
+      <p>
+        下次再访时，或许你会发现，那些段落比印象中更耐读。
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
